@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071b46">
+  <title>Dirección de la Fuerza de Ventas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="deck" id="deck">
+    <header class="deck-header">
+      <button class="header-button" id="topicsButton" aria-label="Abrir temas">TEMAS</button>
+      <div class="session-progress">
+        <div class="session-copy"><strong>Dirección de la Fuerza de Ventas</strong><span id="progressText">0%</span></div>
+        <div class="progress-track"><span id="progressBar"></span></div>
+      </div>
+      <div class="header-actions">
+        <button class="header-button" id="notesButton">NOTAS DEL PROFESOR</button>
+        <button class="header-button compact" id="academicButton" title="Fundamento académico">FUENTES</button>
+      </div>
+    </header>
+
+    <aside class="topics-panel" id="topicsPanel" aria-hidden="true">
+      <div class="panel-head"><div><small>ÍNDICE DE LA PRESENTACIÓN</small><h2>Temas</h2></div><button class="close-button" id="closeTopics" aria-label="Cerrar">×</button></div>
+      <nav id="topicsNav"></nav>
+      <button class="reset-button" id="resetButton">REINICIAR SESIÓN</button>
+    </aside>
+    <div class="scrim" id="scrim" hidden></div>
+
+    <main id="slide" tabindex="-1" aria-live="polite"></main>
+
+    <footer class="deck-controls">
+      <button class="nav-button secondary" id="prevButton">← ANTERIOR</button>
+      <span class="slide-count" id="slideCount">1 / 1</span>
+      <button class="nav-button primary" id="nextButton">SIGUIENTE →</button>
+    </footer>
+  </div>
+
+  <dialog class="modal" id="notesModal">
+    <div class="modal-head"><div><small>USO DEL DOCENTE</small><h2>Notas del profesor</h2></div><button class="close-button" data-close-modal="notesModal">×</button></div>
+    <div id="notesContent" class="modal-content"></div>
+  </dialog>
+
+  <dialog class="modal" id="academicModal">
+    <div class="modal-head"><div><small>BASE CONCEPTUAL</small><h2>Fundamento académico</h2></div><button class="close-button" data-close-modal="academicModal">×</button></div>
+    <div class="modal-content">
+      <p>La sesión integra diagnóstico del desempeño, motivación, liderazgo según la situación, diseño territorial, cuotas, remuneración y evaluación comercial.</p>
+      <p>Fuente disponible en el material: <strong>Syllabus MAR0411 Sales Management, sesión 8</strong>. Los datos de Distribuidora Volcán son ilustrativos.</p>
+      <p>Referencias complementarias incluidas en el proyecto previo: Johnston, Marshall y Ogilvie, <em>Sales Force Management</em>; Jobber, Lancaster y Le Meunier-FitzHugh, <em>Selling and Sales Management</em>.</p>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
